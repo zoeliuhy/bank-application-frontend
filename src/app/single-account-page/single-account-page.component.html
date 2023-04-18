@@ -1,0 +1,49 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2 col-sm-2"></div>
+            <div class="col-lg-6 col-md-8 col-sm-8 info-box">
+                <div class="user-icon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div >
+                    {{account.name}}
+                </div>
+                <div>
+                    {{account.iban}}
+                </div>
+                <div class="balance-box">
+                    <div>BALANCE</div>
+                    <div>€ {{account.balance}}</div>
+                </div>
+                
+                <div class="transaction-table">
+                    <table class="table table-sm table-dark table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Transaction</th>
+                                <th scope="col">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let transaction of transactions">
+                                <th scope="row">{{ transaction.date }}</th>
+                                <td>{{ transaction.title }}</td>
+                                <td>€ {{ transaction.amount }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="back-button">
+                    <button class='btn btn-outline-secondary' (click)='onBack()'>
+                        <i class='fa fa-chevron-left'></i> Back
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
