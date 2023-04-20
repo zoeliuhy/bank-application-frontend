@@ -1,0 +1,18 @@
+<div class="category-table">
+    <table class="table table-sm table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Category</th>
+                <th scope="col">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categories">
+                <th scope="row">{{ category.id }}</th>
+                <td>{{ category.categoryName }}</td>
+                <td>€ 123</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

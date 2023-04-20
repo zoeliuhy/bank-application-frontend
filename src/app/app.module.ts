@@ -11,8 +11,9 @@ import { AccountTransactionListPage } from './page/account-transaction-list/acco
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { TransactionService } from './service/transaction-service.service';
 import { CategoryService } from './service/category-service.service';
-import { InsightComponent } from './page/insight/insight.component';
+import { InsightPage } from './page/insight/insight.component';
 import { TransactionListComponent } from './component/transaction-list/transaction-list.component';
+import { CategoryListComponent } from './component/category-list/category-list.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,9 @@ import { TransactionListComponent } from './component/transaction-list/transacti
     LoginComponent,
     AccountTransactionListPage,
     NavbarComponent,
-    InsightComponent,
+    InsightPage,
     TransactionListComponent,
+    CategoryListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [AccountService, TransactionService, CategoryService],

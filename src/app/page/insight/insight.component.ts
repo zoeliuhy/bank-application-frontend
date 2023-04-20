@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-insight',
   templateUrl: './insight.component.html',
-  styleUrls: ['./insight.component.css']
+  styleUrls: ['./insight.component.css'],
 })
-export class InsightComponent implements OnInit {
+export class InsightPage implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
