@@ -9,6 +9,9 @@ import { AccountService } from './account-service.service';
 import { LoginComponent } from './login/login.component';
 import { SingleAccountComponent } from './single-account-page/single-account-page.component';
 import { NavbarComponent } from './navbar-component/navbar/navbar.component';
+import { TransactionService } from './transaction-service.service';
+import { CategoryService } from './service/category-service.service';
+import { InsightComponent } from './page/insight/insight.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +20,10 @@ import { NavbarComponent } from './navbar-component/navbar/navbar.component';
     LoginComponent,
     SingleAccountComponent,
     NavbarComponent,
+    InsightComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [AccountService],
+  providers: [AccountService, TransactionService, CategoryService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
