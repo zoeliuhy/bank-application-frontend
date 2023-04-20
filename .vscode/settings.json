@@ -1,4 +1,4 @@
 {
-  "mymonorepo.enabled": false,
+  "mymonorepo.enabled": true,
   "files.exclude": null
 }
