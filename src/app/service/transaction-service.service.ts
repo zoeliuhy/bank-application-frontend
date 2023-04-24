@@ -22,7 +22,15 @@ export class TransactionService {
   }
   public findAllByAccountId(id: string | undefined): Observable<Transaction[]> {
     return this.http.get<Transaction[]>(
-      `${this.url}/accounts/${id}/transactions`
+      `${this.url}/transactions/account=${id}`
+    );
+  }
+  public getTransactionByAccountByCategory(
+    accountId: string,
+    categoryId: number
+  ): Observable<Transaction[]> {
+    return this.http.get<Transaction[]>(
+      `${this.url}/transactions/account=${accountId}/category=${categoryId}`
     );
   }
 }

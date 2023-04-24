@@ -10,5 +10,5 @@ export class LoginComponent implements OnInit {
   constructor() {
     this.currentYear = new Date().getFullYear();
   }
-  ngOnInit(): void {}
+  ngOnInit() {}
 }
