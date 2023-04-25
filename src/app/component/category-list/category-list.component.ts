@@ -41,10 +41,17 @@ export class CategoryListComponent implements OnInit {
           .getTransactionByAccountByCategory(accountId, categoryId + 1)
           .subscribe((data) => {
             this.transactions = data;
+
             for (let i = 0; i < this.transactions.length; i++) {
               this.categories[categoryId].categoryAmount +=
                 this.transactions[i].amount;
+              this.categories[categoryId].categoryFootprint = Math.abs(
+                (this.categories[categoryId].categoryAmount *
+                  this.categories[categoryId].categoryMultiplier) /
+                  1000
+              );
             }
+            console.log(this.categories);
           });
       }
     });

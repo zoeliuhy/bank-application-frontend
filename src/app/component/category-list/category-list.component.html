@@ -5,13 +5,15 @@
                 <th scope="col">#</th>
                 <th scope="col">Category</th>
                 <th scope="col">Amount</th>
+                <th scope="col">Co2 Footprint</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let category of categories">
                 <th scope="row">{{ category.id }}</th>
                 <td>{{ category.categoryName }}</td>
-                <td>€ {{ category.categoryAmount}}</td>
+                <td>€ {{ category.categoryAmount | number: '1.2-2'}}</td>
+                <td>{{ category.categoryFootprint | number: '1.2-2'}} kg</td>
             </tr>
         </tbody>
     </table>
