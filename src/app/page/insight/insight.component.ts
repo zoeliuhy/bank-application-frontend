@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Account } from '../../interface/account';
+import { AccountService } from '../../service/account-service.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-insight',
@@ -7,9 +9,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./insight.component.css'],
 })
 export class InsightPage implements OnInit {
-  constructor(private router: Router) {}
+  account: Account = new Account();
 
-  ngOnInit(): void {}
+  constructor(
+    private accountService: AccountService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.getAccountDetail(id);
+    }
+  }
+
+  getAccountDetail(id: string): void {
+    this.accountService.findById(id).subscribe((data) => {
+      this.account = data;
+    });
+  }
 
   onBack(): void {
     this.router.navigate(['/accounts']);

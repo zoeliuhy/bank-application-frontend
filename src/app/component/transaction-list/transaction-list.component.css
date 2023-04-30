@@ -1,3 +1,7 @@
+.transaction-table {
+    margin: 30px 15px;
+}
+
 table {
     text-align: right;
 }
@@ -9,4 +13,5 @@ td:nth-child(1)
 }
 thead {
     font-size: 12px;
+    color: #eab676;
 }
