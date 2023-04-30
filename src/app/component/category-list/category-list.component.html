@@ -1,19 +1,25 @@
 <div class="category-table">
-    <table class="table table-sm table-dark table-hover">
+    <table class="table table-sm table-dark table-hover table-striped">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Category</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Co2 Footprint</th>
+                <th scope="col">Amount (€)</th>
+                <th scope="col">Co2 Footprint (kg)</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let category of categories">
                 <th scope="row">{{ category.id }}</th>
                 <td>{{ category.categoryName }}</td>
-                <td>€ {{ category.categoryAmount | number: '1.2-2'}}</td>
-                <td>{{ category.categoryFootprint | number: '1.2-2'}} kg</td>
+                <td>{{ category.categoryAmount | number: '1.2-2'}}</td>
+                <td>{{ category.categoryFootprint | number: '1.2-2'}}</td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td> Total </td>
+                <td>{{totalCategoryAmount | number: '1.2-2'}}</td>
+                <td>{{totalFootprintAmount | number: '1.2-2'}}</td>
             </tr>
         </tbody>
     </table>

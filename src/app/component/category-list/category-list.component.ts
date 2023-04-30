@@ -14,6 +14,8 @@ export class CategoryListComponent implements OnInit {
   account: Account = new Account();
   transactions: Transaction[] = [];
   categories: Category[] = [];
+  totalCategoryAmount: number = 0;
+  totalFootprintAmount: number = 0;
 
   constructor(
     private categoryService: CategoryService,
@@ -37,6 +39,7 @@ export class CategoryListComponent implements OnInit {
         categoryId++
       ) {
         this.categories[categoryId].categoryAmount = 0;
+        this.categories[categoryId].categoryFootprint = 0;
         this.transactionService
           .getTransactionByAccountByCategory(accountId, categoryId + 1)
           .subscribe((data) => {
@@ -51,7 +54,10 @@ export class CategoryListComponent implements OnInit {
                   1000
               );
             }
-            console.log(this.categories);
+            this.totalCategoryAmount +=
+              this.categories[categoryId].categoryAmount;
+            this.totalFootprintAmount +=
+              this.categories[categoryId].categoryFootprint;
           });
       }
     });

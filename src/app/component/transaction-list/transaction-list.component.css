@@ -1,0 +1,12 @@
+table {
+    text-align: right;
+}
+
+th:nth-child(1),
+td:nth-child(1)
+{
+    text-align: center;
+}
+thead {
+    font-size: 12px;
+}
