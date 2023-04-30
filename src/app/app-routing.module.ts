@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: 'accounts', component: AccountListComponent },
   { path: 'accounts/:id/insight', component: InsightPage },
   { path: 'accounts/:id', component: AccountTransactionListPage },
-  { path: '', redirectTo: 'accounts', pathMatch: 'full' },
-  { path: '**', redirectTo: 'accounts', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];
 
 @NgModule({

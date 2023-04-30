@@ -33,7 +33,7 @@ main {
     text-align: left;
 }
 
-input[type=email] {
+input {
     background-color: #1A2226;
     border: none;
     border-bottom: 2px solid #0DB8DE;
@@ -44,19 +44,7 @@ input[type=email] {
     margin-bottom: 20px;
     padding-left: 0px;
     color: #ECF0F5;
-}
-
-input[type=password] {
-    background-color: #1A2226;
-    border: none;
-    border-bottom: 2px solid #0DB8DE;
-    border-top: 0px;
-    border-radius: 0px;
-    font-weight: bold;
-    outline: 0;
-    padding-left: 0px;
-    margin-bottom: 20px;
-    color: #ECF0F5;
+    letter-spacing: 2px;
 }
 
 .form-group {
