@@ -1,0 +1,17 @@
+.category-table {
+    margin: 30px 15px;
+}
+
+table {
+    text-align: left;
+    
+}
+th:nth-child(3), th:nth-child(4), 
+td:nth-child(3), td:nth-child(4) {
+    text-align: right;
+}
+
+thead, .totalRow {
+    font-size: 12px;
+    color: #eab676;
+}

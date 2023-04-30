@@ -16,7 +16,7 @@ main {
     padding: 20px 10px;
 }
 
-.user-icon {
+.icon {
     height: 100px;
     font-size: 50px;
     line-height: 100px;
@@ -26,10 +26,14 @@ main {
 }
 
 .balance-box {
-    background: #ECF0F5;
+    opacity: 0.7;
+    background-color: #ECF0F5;
     color: #1A2226;
+    border: 2px;
+    border-color: #27EF9F #0DB8DE #0DB8DE #27EF9F;
     font-size: 15px;
-    border-radius: 8px;
+    border-style: solid;
+    border-radius: 4px;
     width: 40%;
     margin: 10px auto 20px;
 }

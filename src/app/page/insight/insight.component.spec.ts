@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InsightComponent } from './insight.component';
+import { InsightPage } from './insight.component';
 
 describe('InsightComponent', () => {
-  let component: InsightComponent;
-  let fixture: ComponentFixture<InsightComponent>;
+  let component: InsightPage;
+  let fixture: ComponentFixture<InsightPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InsightComponent ]
-    })
-    .compileComponents();
+      declarations: [InsightPage],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(InsightComponent);
+    fixture = TestBed.createComponent(InsightPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

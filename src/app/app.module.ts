@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,8 +11,10 @@ import { AccountTransactionListPage } from './page/account-transaction-list/acco
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { TransactionService } from './service/transaction-service.service';
 import { CategoryService } from './service/category-service.service';
-import { InsightComponent } from './page/insight/insight.component';
+import { InsightPage } from './page/insight/insight.component';
 import { TransactionListComponent } from './component/transaction-list/transaction-list.component';
+import { CategoryListComponent } from './component/category-list/category-list.component';
+import { UserService } from './service/user-service.service';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,18 @@ import { TransactionListComponent } from './component/transaction-list/transacti
     LoginComponent,
     AccountTransactionListPage,
     NavbarComponent,
-    InsightComponent,
+    InsightPage,
     TransactionListComponent,
+    CategoryListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [AccountService, TransactionService, CategoryService],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  providers: [AccountService, TransactionService, CategoryService, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
