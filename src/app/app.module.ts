@@ -15,6 +15,7 @@ import { InsightPage } from './page/insight/insight.component';
 import { TransactionListComponent } from './component/transaction-list/transaction-list.component';
 import { CategoryListComponent } from './component/category-list/category-list.component';
 import { UserService } from './service/user-service.service';
+import { UserDetailPage } from './page/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { UserService } from './service/user-service.service';
     InsightPage,
     TransactionListComponent,
     CategoryListComponent,
+    UserDetailPage,
   ],
   imports: [
     BrowserModule,

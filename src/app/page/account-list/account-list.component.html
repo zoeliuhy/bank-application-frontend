@@ -5,7 +5,6 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Email</th>
                     <th scope="col">IBAN</th>
                 </tr>
             </thead>
@@ -13,10 +12,14 @@
                 <tr *ngFor="let account of accounts" >                   
                     <td>{{ account.id }}</td>
                     <td><a [routerLink]="['/accounts', account.id]">{{ account.name }}</a></td>
-                    <td>{{ account.email }}</td>
                     <td>{{ account.iban }}</td>
                 </tr>
             </tbody>
         </table>
+        <div class="back-button">
+            <button class='btn btn-outline-info' (click)='logout()'>
+                <i class='fa fa-chevron-left'></i> Logout
+            </button>
+        </div>
     </div>
 </div>
